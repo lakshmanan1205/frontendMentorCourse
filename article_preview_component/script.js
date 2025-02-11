@@ -20,6 +20,11 @@ function btnClick(e) {
 function btnOut(e) {
   if (!e.target.closest("#btn") && is_btn_active) {
     ele_popup.className = "hidden";
+    ele_author.classList.toggle("active");
+
+    if (lastWidth < 768) {
+      ele_author_info.className = is_btn_active ? "show" : "hidden";
+    }
     is_btn_active = !is_btn_active;
   }
 }
